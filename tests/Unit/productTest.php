@@ -78,25 +78,4 @@ class productTest extends TestCase
         $this->assertNull(Product::find($product->id));
     }
 
-    /*
-    public function testRejetPrixNegatif(): void
-    {
-        /$this->expectException(QueryException::class);
-
-        $post = Product::create([
-            'name'        => 'Produit invalide',
-            'description' => 'Prix négatif interdit',
-            'price'       => -64,
-            'stock'       => 10,
-        ]);
-
-        $createdPost = Product::find($post->id);
-
-        $this->assertNotNull($createdPost);
-        $this->assertEquals('Produit invalide', $createdPost->name);
-        $this->assertEquals('Prix négatif interdit', $createdPost->description);
-        $this->assertEquals(-64, $createdPost->price);
-        $this->assertEquals(10, $createdPost->stock);
-    }
-    */
 }
