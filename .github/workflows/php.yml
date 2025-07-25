@@ -32,6 +32,16 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
 
+    - name: Copier .env
+      run: cp .env.example .env
+
+    - name: Générer la clé Laravel
+      run: php artisan key:generate
+
+    - name: Lancer les tests Laravel
+      run: php artisan test
+
+
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
